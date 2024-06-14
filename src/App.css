@@ -204,11 +204,3 @@ h1 {
 .inactive {
   border-bottom: 5px solid transparent;
 }
-/* .tile {
-  color: currentColor;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: color 0.3s; 
-} */
