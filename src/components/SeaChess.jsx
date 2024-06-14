@@ -8,6 +8,8 @@ import ScoreBoard from "./ScoreBoard";
 const Играч_X = "X";
 const Играч_O = "O";
 
+
+
 const winningCombinations = [
   //Rows
   { combo: [0, 1, 2], strikeClass: "strike-row-1" },
@@ -86,6 +88,8 @@ function SeaChess() {
     setStrikeClass(null);
   };
 
+
+
   useEffect(() => {
     checkWinner(tiles, setStrikeClass, setGameState);
   }, [tiles]);
@@ -97,7 +101,7 @@ function SeaChess() {
       setOScore((prevScore) => prevScore + 1);
     }
   }, [gameState]);
-
+  
   return (
     <div>
       <h1>Морски Шах</h1>
@@ -107,6 +111,7 @@ function SeaChess() {
         tiles={tiles}
         onTileClick={handleTileClick}
         strikeClass={strikeClass}
+      
       />
       <GameOver gameState={gameState} />
       <Reset gameState={gameState} onReset={handleReset} />
